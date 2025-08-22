@@ -8,35 +8,35 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
+      <nav className="bg-secondary shadow-sm border-b border-primary/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-secondary">АльпТех</span>
+              <span className="text-2xl font-bold text-primary">АльпТех</span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Услуги</a>
-              <a href="#safety" className="text-muted-foreground hover:text-primary transition-colors">Безопасность</a>
-              <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
+              <a href="#home" className="text-primary/80 hover:text-primary transition-colors">Главная</a>
+              <a href="#services" className="text-primary/80 hover:text-primary transition-colors">Услуги</a>
+              <a href="#safety" className="text-primary/80 hover:text-primary transition-colors">Безопасность</a>
+              <a href="#contacts" className="text-primary/80 hover:text-primary transition-colors">Контакты</a>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="hidden lg:flex items-center space-x-2 text-sm">
-                <Icon name="Phone" size={16} />
+              <div className="hidden lg:flex items-center space-x-2 text-sm text-primary">
+                <Icon name="Phone" size={16} className="text-primary" />
                 <span>+7 (910) 703-23-51</span>
               </div>
-              <Button size="sm">Заказать звонок</Button>
+              <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">Заказать звонок</Button>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-br from-secondary to-secondary/90 text-white">
+      <section id="home" className="relative bg-gradient-to-br from-secondary to-secondary/95 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Профессиональная команда промышленных альпинистов
               </div>
               
@@ -46,13 +46,13 @@ export default function Index() {
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                     <Icon name="Check" size={16} className="text-white" />
                   </div>
                   <span className="text-lg">Гарантируем качество и ответственный подход к работе</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                     <Icon name="Check" size={16} className="text-white" />
                   </div>
                   <span className="text-lg">Принимаем грамотные инженерные решения в самых сложных ситуациях</span>
@@ -65,7 +65,7 @@ export default function Index() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary/20 to-transparent p-8 rounded-2xl backdrop-blur-sm">
+              <div className="bg-gradient-to-br from-primary/10 to-transparent p-8 rounded-2xl backdrop-blur-sm border border-primary/20">
                 <img 
                   src="/img/df4ec66e-5de0-42de-9a2a-ba58fc0ec444.jpg" 
                   alt="Промышленный альпинист на высоте"
@@ -78,85 +78,85 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-muted/30">
+      <section id="services" className="py-20 bg-secondary/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
               Наши услуги
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-primary/80 max-w-2xl mx-auto">
               Полный спектр высотных работ с использованием современного оборудования и технологий
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-primary/5 border-primary/20">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Building" size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Building" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Фасадные работы</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-primary">Фасадные работы</CardTitle>
+                <CardDescription className="text-primary/70">
                   Утепление, ремонт и отделка фасадов зданий любой сложности
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-primary/5 border-primary/20">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Wrench" size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Wrench" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Кровельные работы</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-primary">Кровельные работы</CardTitle>
+                <CardDescription className="text-primary/70">
                   Монтаж, ремонт и обслуживание кровли на высотных объектах
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-primary/5 border-primary/20">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Zap" size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Zap" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Электромонтажные работы</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-primary">Электромонтажные работы</CardTitle>
+                <CardDescription className="text-primary/70">
                   Установка и обслуживание электрооборудования на высоте
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-primary/5 border-primary/20">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Droplets" size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Droplets" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Герметизация швов</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-primary">Герметизация швов</CardTitle>
+                <CardDescription className="text-primary/70">
                   Профессиональная герметизация межпанельных швов
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-primary/5 border-primary/20">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Paintbrush" size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Paintbrush" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Покрасочные работы</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-primary">Покрасочные работы</CardTitle>
+                <CardDescription className="text-primary/70">
                   Окраска фасадов и конструкций на любой высоте
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-primary/5 border-primary/20">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Shield" size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Shield" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Аварийные работы</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-primary">Аварийные работы</CardTitle>
+                <CardDescription className="text-primary/70">
                   Срочное устранение аварийных ситуаций на высотных объектах
                 </CardDescription>
               </CardHeader>
@@ -173,45 +173,45 @@ export default function Index() {
               <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-6">
                 Безопасность - наш приоритет
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-secondary/70 mb-8">
                 Мы используем только сертифицированное оборудование и строго соблюдаем все требования безопасности при выполнении высотных работ.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Icon name="Award" size={16} className="text-primary" />
+                  <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="Award" size={16} className="text-accent" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-secondary mb-2">Сертифицированные специалисты</h3>
-                    <p className="text-muted-foreground">Все наши альпинисты имеют необходимые допуски и регулярно проходят обучение</p>
+                    <p className="text-secondary/70">Все наши альпинисты имеют необходимые допуски и регулярно проходят обучение</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Icon name="ShieldCheck" size={16} className="text-primary" />
+                  <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="ShieldCheck" size={16} className="text-accent" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-secondary mb-2">Страхование ответственности</h3>
-                    <p className="text-muted-foreground">Полная страховка от несчастных случаев и материального ущерба</p>
+                    <p className="text-secondary/70">Полная страховка от несчастных случаев и материального ущерба</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Icon name="Settings" size={16} className="text-primary" />
+                  <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="Settings" size={16} className="text-accent" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-secondary mb-2">Современное оборудование</h3>
-                    <p className="text-muted-foreground">Используем только проверенное и сертифицированное снаряжение</p>
+                    <p className="text-secondary/70">Используем только проверенное и сертифицированное снаряжение</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary/5 to-transparent p-8 rounded-2xl">
+              <div className="bg-gradient-to-br from-primary/5 to-transparent p-8 rounded-2xl border border-primary/20">
                 <img 
                   src="/img/17b59188-ae8c-4343-a4bb-54dac31becc2.jpg" 
                   alt="Безопасное оборудование для промышленного альпинизма"
@@ -237,61 +237,61 @@ export default function Index() {
 
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
                     <Icon name="Phone" size={20} className="text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold">+7 (910) 703-23-51</p>
-                    <p className="text-sm opacity-75">Основной номер</p>
+                    <p className="font-semibold text-primary">+7 (910) 703-23-51</p>
+                    <p className="text-sm text-primary/70">Основной номер</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
                     <Icon name="Phone" size={20} className="text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold">+7 (902) 753-07-09</p>
-                    <p className="text-sm opacity-75">Дополнительный номер</p>
+                    <p className="font-semibold text-primary">+7 (902) 753-07-09</p>
+                    <p className="text-sm text-primary/70">Дополнительный номер</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
                     <Icon name="MapPin" size={20} className="text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold">Тула и область</p>
-                    <p className="text-sm opacity-75">Зона обслуживания</p>
+                    <p className="font-semibold text-primary">Тула и область</p>
+                    <p className="text-sm text-primary/70">Зона обслуживания</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Оставить заявку</h3>
+            <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/30">
+              <h3 className="text-2xl font-bold mb-6 text-secondary">Оставить заявку</h3>
               <form className="space-y-4">
                 <div>
                   <Input 
                     placeholder="Ваше имя" 
-                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+                    className="bg-white/90 border-primary/30 text-secondary placeholder:text-secondary/50"
                   />
                 </div>
                 <div>
                   <Input 
                     type="tel" 
                     placeholder="Номер телефона" 
-                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+                    className="bg-white/90 border-primary/30 text-secondary placeholder:text-secondary/50"
                   />
                 </div>
                 <div>
                   <Textarea 
                     placeholder="Описание работ" 
                     rows={4}
-                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+                    className="bg-white/90 border-primary/30 text-secondary placeholder:text-secondary/50"
                   />
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" size="lg">
                   Отправить заявку
                 </Button>
               </form>
